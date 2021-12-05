@@ -1,22 +1,324 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--
+Firewave
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@//%%#%%%%%%#%####*(@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@#%%%%%%%#################(*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@%%%%%##########(((((((((((((/@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@#%#######((((((((((((((((((/@@@////*@@@@@@@@@@@@@@@@@@@@@@@#(@@@
+@@@@@@@@@@@@@@@#######(((((((//////////////@@@/,///////(((/@@@@@@@#(%%%%%%%((@@@
+@@@@@@@@@@@@@@######(((((/////////*******/&@@@.***////////((((((######%%%%%#@@@@
+@@@@@@@@@@@@@#####(((((/////**************@@@/********//////(((((#######%%#@@@@@
+@@@@@@@@@@@@@(##(((((/////**********,****@@@/,,*********//////(((((######(#@@@@@
+@@@@@@@@@@@@(##(((((////*******,,,,,,,,*@@@%.,,,,,********/////(((((####(%@@@@@@
+@@@@@@@@@@@####((((////******,,,,,,,,,,(@@@*,,,,,,,,*******/////(((((###%@@@@@@@
+@@@@@@@@@@@(#/##@@@@@@@@@@@@@@@##(,,,,*@@@/,,,,,,,,,,*******/////((((###@@@@@@@@
+@@@@@@@@@@@@@@@@@@/////****,@@@@@@@@#/@@@/...,,,,,,,,,******/////((((((%@@@@@@@@
+@@@@@@@@@@%%#((((///*****,,,,.....@@@@@@@,....,,,,,,,,,******////(((((%@@@@@@@@@
+@@@@@@@@#(##((((////*****,,,,.......*@@@@@@@%*,,,,,,,,,******////((/%%@@@@@@@@@@
+@@@@@@@@(###(((((////****,,,,,.....,@@@*..@@@@@@@&%%%,.,,,(%%%%@@@@@@@@@@@@@@@@@
+@@@@@@@(####(((((////*****,,,,,....@@@*. ......@@@@@@@@@@@@@@@@@*//*(@@@@@@@@@@@
+@@@@@@(######(((((/////****,,,,,,,(@@@...................,,,,,,,***#@@@@@@@@@@@@
+@@@@@@(#######((((((////******,,,,@@@,..................,,,,,,,***(@@@@@@@@@@@@@
+@@@@@(%########((((((//////*****,@@@*.................,,,,,,,,***(*@@@@@@@@@@@@@
+@@@@(%%%########((((((((//////**@@@&...............,,,,,,,,,*****#@@@@@@@@@@@@@@
+@@@(#%%%%##########((((((((////(@@@............,,,,,,,,,,,******#@@@@@@@@@@@@@@@
+@@@/%%%%((#%%%%%%%%%%##(((((((*@@@*,,,,,,,,,,,,,,,,,,,,,*******(,@@@@@@@@@@@@@@@
+@@/%@@@@@@@@@@@@@@@@@@@@@&%#(/@@@*.,,,,,,,,,,,,,,,,,*********/(#@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@.,,,,,,,,,,,,************////#@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@&/*******************///////(@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#//,,******////**///@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+-->
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
+    <link id="the-theme" rel="stylesheet" href="7-modified.css">
+    <link rel="stylesheet" href="style1.css">
+    <link rel="shortcut icon" href="images/misc/firewave.png">
+    <script src="lang/language.js"></script>
+    <script src="theme.js"></script>
+    <script src="window.js"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://markverb1.github.io/style.css">
-    <title>hello world</title>
+    <title>FireWave</title>
 </head>
-
-<body>
-    <div class="TWFlex">
-        <div class="typewriter">
-            <h1>index.html</h1>
+<body onload="cookieLang(); cookieTheme(); setInterval(hover(), 1000);" id="body">
+    <div id="changelog-txt" onclick="document.getElementById('changelog-win').style.display = 'block'">
+            <img src="images/misc/txt.png" style="width:64px;" />
+            <p>Changelog.txt</p>
     </div>
-        <p>this is a test</p>
+    <div id="firewave-txt" onclick="document.getElementById('firewave').style.display = 'block'">
+        <img src="images/misc/firewave_shadow.png" style="width:64px;" />
+        <p>Firewave</p>
+</div>
+<div id="ie" onclick="document.getElementById('ie-win').style.display = 'block';">
+    <img src="images/misc/ie8.png" style="width:64px;" />
+    <p>Internet Explorer 8</p>
+</div>
+<div id="ctrl" onclick="document.getElementById('settings').style.display = 'block';">
+    <img src="images/misc/ctrl.png" style="width:64px;" />
+    <p>Control Panel</p>
+</div>
+    <div class="window glass" id="firewave" style="max-width: 350px; margin: auto; position:absolute;top:30px;left:50%;" onclick="prioritizeWindow('firewave')"> 
+        <div class="title-bar">
+          <div class="title-bar-text">FireWave</div>
+          <div class="title-bar-controls">
+            <button aria-label="Close" onclick="document.getElementById('firewave').style.display = 'none'"></button>
+          </div>
+        </div>
+        <div class="window-body">
+            <div class="princpale">
+                <class class="titre">
+                    <h1 id="welcome" style="color:black;font-size:20px;">Bienvenue sur FireWave !</h1>
+                </class>
+                <figure id="audio_play">
+                    <audio autoplay>
+                        <source src="/sounds/startup.mp3" type="audio/mp3">
+                        <source src="/sounds/startup.wav" type="audio/vnd.wave"
+                    </audio>
+                </figure>
+                <p id="computer_fan"style="color:black;">
+                    Fan de l'informatique ? Ce site vous permet de découvrir mes packs et bien plus encore
+                    !<br />N'hésitez pas à me contactez en cas de problèmes !
+                </p>
+                <section class="video">
+                    <h2 id="current_video"style="color:black;font-size:20px;">La vidéo du moment !</h2>
+                    <iframe width="280" height="158" src="https://www.youtube.com/embed/mO3fSIMsKSc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </section>
+            </div>
+          </div>
+      </div>
+<div class="window glass" id="changelog-win" onclick="prioritizeWindow('changelog-win')">
+    <div class="title-bar" id="title-bar" >
+      <div class="title-bar-text">Changelog</div>
+      <div class="title-bar-controls">
+        <button aria-label="Close" onclick="document.getElementById('changelog-win').style.display = 'none'"></button>
+      </div>
     </div>
+    <div class="window-body" style="overflow-y:scroll; height:452px;">
+        <div>
+            <p>Current progress of FireWave: <b>53%</b></p>
+            <div style="width:50%;" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="53" class="animate" >
+                <div style="width: 53%;"></div>
+            </div>
+        </div>
+            <h1>Changelog</h1>
+        <h2>Build 95</h2>
+        <li id="corrections">Corrections d'un problème de fond-d'écran lorsqu'on dé-zoome</li>
+        <li id="javascript">
+            Test de Javascript (Dans le code uniquement)
+        </li>
+        <h2>Build 97.C</h2>
+        <li id="changelog">
+            Ajout d'une catégorie "Changelog"
+        </li>
+    
+        <li id="kevcoorp">
+            Suppresion de "KevCoorp" dans la section "Me contactez"
+        </li>
+    
+        <li id="version">
+            Suppresion de la version du site dans la section "A propos"
+        </li>
+    
+        <h2>Build 98</h2>
+    
+        <li id="navigation">
+            Changement du style de la barre de navigation.
+        </li>
+    
+        <h2>Build 98.2 Semi-Big-Update</h2>
+    
+        <li id="background">Le Background utilisé dans le changelog a était remplaçé par un fond gris.</li>
+    
+        <li id="navigation2">La Barre de navigation change encore une fois de couleur pour passer au vert transparent.
+        </li>
+    
+        <li id="myself">La présentation de moi-meme à était changé.</li>
+    
+        <li id="kevcoorp2">L'emplacement de "KevCoorp" ce trouve en dessous des builds du site.</li>
+    
+        <h2 id="99">Build 99 Traduction Update</h2>
+        <li id="english">Traduction en anglais du site</li>
+        <li id="design">Quelques changements de conception</li>
+    
+    
+        <h2 id="99.1">Mise à jour mineure Build 99.1</h2>
+        <li id="navigation3">Le texte souligné en rouge à était supprimé</li>
+        <li id="correction2">Correction d'un problème de traduction</li>
+    
+        <h2 id="100">Refonte du site - Build 100</h2>
+        <li id="ui">Le Build 100, apporte notamment une nouvelle interface au site !</li>
+        <li id="fix2">La plupart des problèmes ont étaient corrigés</li>
+    
+        <h2 id="100.1">Build 100.1</h2>
+        <li id="titre">Changement du style du titre de la page "index.html"</li>
+        <li id="fix3">Correctif d'un problème sur la navbar.</li>
+    
+        <h2 id="102">Build 102</h2>
+        <li id="navigation4">Plusieurs changement ont étaient effectués sur la barre de navigation.</li>
+        <li id="fix4">Correction d'un petit problème mineure.</li>
+    
+        <h2 id="103">Build 103</h2>
+        <li id="navbar1">Des modifications mineures apportés à la navbar.</li>
+    
+        <h2 id="M2.200">Milestone 2 - Build 200</h2>
+        <li id="ui2">Changement majeure de certaines fonctionnalités</li>
+    
+        <h2 id="M2.1000">Build 1000</h2>
+        <li id="navbar2">La Bar de Navigation change d'apparence avec un mélange avec celle de Windows Vista et de 7</li>
+        <li id="time">Une heure à était ajouté.</li>
+        <li id="Language">Nous travaillons actuellement sur plusieurs langues.</li>
+        <li id="Webanim">Des animations sont en cours de réalisations.</li>
+        <li id="font">De nouvelles polices d'écritures ont étaient ajoutés.</li>
+        <li id="form">Un Google Form à étaient ajoutés.</li>
+        <li id="fix5">Plusieurs problèmes ont étaient corrigés</li>
+        <li id="icon2">De nouvelles icones ont étaient ajoutés</li>
+        <li id="favicon3">Le favicon à subit une amélioration.</li>
+        <li id="other1">Amélioration Mineure sur le site.</li>
 
+        <h2 id="1200">Beta 1 - Build 1200</h2>
+        <li id="apps">Le site possède désormais des applications</li>
+        <li id="window">Ajout d'une fenetre</li>
+        <li id="logo">Le site possède un logo</li>
+        <li id="theme">2 thèmes ont était ajoutés au site !</li>
+        <li id="page">Les pages html ont étaient déplacés vers Internet Explorer 8</li>
+
+        <h2 id="Beta1">Beta 1 - Build 1444 </h2>
+        <li id="wallpaper">Le fond d'écran du site à était remplaçé par celui de l'écran de connexion de Windows 7.</li>
+        <li id="config">Il est désormais possible de configurer le fonds d'écran</li>
+        <li id="fix6">Corrections mineure de certains problèmes</li>
+        
+
+        
+        <p id="comingsoon"> <strong>D'autres Builds sont prévus prochainnement.</strong></p>
+    </div>
+  </div>
+  <div class="window glass" id="ie-win" onclick="prioritizeWindow('ie-win')">
+    <div class="title-bar" id="title-bar" >
+      <div class="title-bar-text">Internet Explorer 8</div>
+      <div class="title-bar-controls">
+        <button aria-label="Close" onclick="document.getElementById('ie-win').style.display = 'none'"></button>
+      </div>
+    </div>
+    <div class="window-body" style=" height:552px;">
+        <section class="tabs" style="max-width: 775px">
+            <menu role="tablist" aria-label="Sample Tabs">
+              <button role="tab" aria-controls="tab-A" aria-selected="true" id="windows7pack">Pack Windows 7</button>
+              <button role="tab" aria-controls="tab-B" aria-selected="false" id="about">A propos de moi</button>
+              <button role="tab" aria-controls="tab-C" aria-selected="false" id="contact">Me Contactez</button>
+              <button role="tab" aria-controls="tab-D" aria-selected="false" id="credits">Crédits</button>
+            </menu>
+            <!-- the tab content -->
+            <article role="tabpanel" id="tab-A">
+                <iframe src="pack.html" style="width:740px;height:497px;"></iframe>
+            </article>
+            <article role="tabpanel" id="tab-B" hidden="true">
+                <iframe src="about.html" style="width:740px;height:497px;"></iframe>
+            </article>
+            <article role="tabpanel" id="tab-C" hidden="true">
+                <iframe src="network.html" style="width:740px;height:497px;"></iframe>
+            </article>
+            <article role="tabpanel" id="tab-D" hidden="true">
+                <iframe src="credits.html" style="width:740px;height:497px;"></iframe>
+            </article>
+          </section>
+    </div>
+  </div>
+  <div class="window glass" id="settings" onclick="prioritizeWindow('settings')"  style="max-width: 450px;display:none">
+    <div class="title-bar" id="title-bar" >
+      <div class="title-bar-text">Control Panel</div>
+      <div class="title-bar-controls">
+        <button aria-label="Close" onclick="document.getElementById('settings').style.display = 'none'"></button>
+      </div>
+    </div>
+    <div class="window-body">
+        <section class="tabs" style="max-width: 775px">
+            <menu role="tablist" aria-label="Sample Tabs">
+              <button role="tab" aria-controls="tab-A1" aria-selected="true">Wallpaper</button>
+              <button role="tab" aria-controls="tab-B2" aria-selected="false">Theme</button>
+            </menu>
+            <!-- the tab content -->
+            <article role="tabpanel" id="tab-A1">
+                <p style="font-size:20px;"><b>Your wallpaper will not be saved!</b></p>
+               <div class="field-row" >
+                <input id="radio12" type="radio" name="wallpaper_choose" onclick="document.getElementById('body').style.backgroundImage = 'url(images/bg/win7.jpg)'">
+                <label for="radio12"><img class="thumb" src="images/bg/win7.jpg"></label>
+              </div>
+              <div class="field-row">
+                <input id="radio13" type="radio" name="wallpaper_choose"  onclick="document.getElementById('body').style.backgroundImage = 'url(images/bg/xp.jpeg)'">
+                <label for="radio13"><img class="thumb" src="images/bg/xp.jpeg"></label>
+              </div>
+              <div class="field-row">
+                <input id="radio14" type="radio" name="wallpaper_choose" onclick="document.getElementById('body').style.backgroundImage = 'url(images/bg/win98.jpg)'">
+                <label for="radio14"><img class="thumb" src="images/bg/win98.jpg"></label>
+              </div>
+              <div class="field-row">
+                <input id="radio15" type="radio" name="wallpaper_choose" onclick="document.getElementById('body').style.backgroundImage = 'url(images/bg/redmoon.jpg)'">
+                <label for="radio15"><img class="thumb" src="images/bg/redmoon.jpg"></label>
+            </div>
+            </article>
+            <article role="tabpanel" id="tab-B2" hidden="true">
+              <p style="font-size:20px;"><b>The taskbar will change on reload.</b></p>
+                <div class="field-row" onclick="document.getElementById('the-theme').href = '7-modified.css';document.cookie = `theme=7`">
+                    <input id="radio16" type="radio" name="first-example">
+                    <label for="radio16">Windows 7</label>
+                  </div>
+                  <div class="field-row" onclick="document.getElementById('the-theme').href = 'https://unpkg.com/xp.css';document.cookie = `theme=xp`">
+                    <input id="radio17" type="radio" name="first-example">
+                    <label for="radio17">Windows XP</label>
+                  </div>
+                  <div class="field-row">
+                    <input id="radio18" type="radio" name="first-example"onclick="document.getElementById('the-theme').href = 'https://unpkg.com/98.css';document.cookie = `theme=98`">
+                    <label for="radio18">Windows 98</label>
+                  </div>
+            </article>
+          </section>
+    </div>
+  </div>
+    <p id="build">Build 1200</p>
+    <div id="start-menu" style="display:none">
+        <div class="menu-item" style="cursor:pointer;" onclick="
+            document.getElementById('ie-win').style.display = 'block';
+            document.getElementById('start-menu').style.display = 'none';
+            ">
+            <img src="images/startmenu/ie.png" />  Internet Explorer 8
+        </div>
+        <div class="menu-item">
+            <img src="images/startmenu/contribute.png" />
+            <a id="help" href="https://forms.gle/uZaLEz8HWMSiDB1D7">Aidez à développer ce site !</a>
+        </div>
+        <div class="menu-item" style="position:fixed;bottom:37px;">
+            <img src="images/startmenu/shutdown.png" />
+            <a id="shut" href="./">Fermer</a>
+        </div>
+    </div>
+    <div class="nav" id="nav">
+        <div class="logo">
+            <img onclick="startIconChange()" style="display:block" src="images/startmenu/start.png" id="start">
+            <img onclick="startIconChange()" src="images/startmenu/startclick.png" id="start2" style="display: none;">
+        </div>
+        <div class="onglet">
+            <select id="theme" onchange="themeSwitch(this.value)" hidden>
+                <option value="7">Windows 7</option>
+                <option value="xp">Windows XP</option>
+                <option value="98">Windows 98</option>
+            </select>
+            <select id="language" onchange="langSwitch(this.value)">
+                <option value="fr">Français</option>
+                <option value="en">English</option>
+            </select>
+            <div style="display:inline-block;color:white;" id="digital-clock"></div>
+            <script src="time.js"></script>
+        </div>
+    </div>
 </body>
-
+<script src="drag.js"></script>
+<script src="drag2.js"></script>
+<script src="drag3.js"></script>
+<script src="drag4.js"></script>
+<script src="7.js"></script>
+<script src="start.js"></script>
 </html>

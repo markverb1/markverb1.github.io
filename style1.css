@@ -1,0 +1,209 @@
+@font-face {
+	font-family: "Segoe UI 7";
+	src: url(Fonts/SegoeUI7.ttf);
+}
+body {
+	margin: 0%;
+	/*padding: 0.5%;*/
+	background: url("images/bg/win7.jpg");
+	height: 100%; 
+	overflow: hidden;
+	color: black;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	
+}
+
+#start,
+#start2 {
+	width: 50px;
+	position: fixed;
+	bottom: 0px;
+	left: -5px;
+}
+#start-menu {
+	position: fixed;
+	border-radius: 7px 7px 0px 0px;
+	padding: 9px;
+	bottom: 30px;
+	width: 174px;
+	height: 367px;
+	background: url("images/startmenu/StartMenuBg.png");
+	background-color: white;
+	color: black;
+}
+.menu-item {
+	padding: 5px;
+	text-align: left;
+	font-size: 16px;
+	width: 164px;
+}
+.menu-item a, p{
+	color: black;
+	text-decoration: none;
+}
+.menu-item:hover {
+	background-color: rgba(0, 140, 255, 0.308);
+	text-decoration: none;
+}
+
+#nav {
+	background: url("images/startmenu/Taskbar.png");
+	backdrop-filter: blur(2px);
+	padding: 7px;
+	height: 16px;
+	position: fixed;
+	bottom: 0%;
+	width: 99.25%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+#nav a {
+	color: white;
+	text-decoration: none;
+	margin-right: 5px;
+}
+#nav p {
+	color: white;
+	text-decoration: none;
+	margin-right: 5px;
+}
+
+#nav a:hover {
+	color: white;
+	border-bottom: 1px solid white;
+}
+
+.principale {
+	margin-top: 40px;
+}
+.principale h4 {
+	margin-top: -20px;
+	padding: 20px;
+}
+
+div.build {
+	color: black;
+	display: flex;
+}
+
+.titre {
+	color: black;
+	font-size: 20px;
+	text-align: center;
+}
+
+#announce {
+	color: red;
+}
+.video {
+	text-align: center;
+}
+
+#changelog-txt {
+	margin:20px;
+	text-shadow: black 1px 1px 2px;
+	text-align: center;
+	position:fixed;
+	left:10px;
+	z-index: 0;
+}
+
+#changelog-txt p {
+	position:relative;
+	bottom:15px;
+	color:white;
+}
+#firewave-txt {
+	margin:20px;
+	text-shadow: black 1px 1px 2px;
+	text-align: center;
+	position:fixed;
+	left:10px;
+	top:90px;
+	z-index: 0;
+}
+
+#firewave-txt p {
+	position:relative;
+	bottom:15px;
+	color:white;
+}
+#ie {
+	margin:20px;
+	text-shadow: black 1px 1px 2px;
+	text-align: center;
+	position:fixed;
+	left:90px;
+	z-index: 0;
+}
+
+#ie p {
+	position:relative;
+	bottom:15px;
+	color:white;
+}
+#ctrl {
+	margin:20px;
+	text-shadow: black 1px 1px 2px;
+	text-align: center;
+	position:fixed;
+	left:100px;
+	top:90px;
+	z-index: 0;
+}
+
+#ctrl p {
+	position:relative;
+	bottom:15px;
+	color:white;
+}
+#changelog-win {
+	min-width: 650px;
+	min-height:500px;
+	max-width: 650px;
+	max-height:500px;
+	margin: auto;
+	position:absolute; 
+	display:none;
+
+}
+#ie-win {
+	min-width: 800px;
+	min-height:600px;
+	max-width: 800px;
+	max-height:600px;
+	margin: auto;
+	position:absolute; 
+	display:none;
+
+}
+#settings {
+	min-width: 400px;
+	max-width: 400px;
+	margin: auto;
+	position:absolute; 
+	display:none;
+}
+
+h1 {
+	font-size:25px;
+}
+h2 {
+	font-size:15px;
+}
+
+#build {
+	color:white;
+	text-shadow: black 1px 1px 1px;
+	position:fixed;
+	bottom:20px;
+	right: 5px;
+}
+.thumb {
+	width:200px;
+}

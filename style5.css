@@ -1,0 +1,50 @@
+@font-face {
+	font-family: "Segoe UI 7";
+	src: url(Fonts/SegoeUI7.ttf);
+}
+body {
+	margin: 0%;
+	/*padding: 0.5%;*/
+	font-family: "Segoe Ui 7";
+	background: url("images/bg/crreditsbg.png");
+	height: 50vh;
+	background-position: center;
+	color: #ffff;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.nav {
+	background-color: #0455aabb;
+	background: url("images/startmenu/Taskbar.png");
+	backdrop-filter: blur(2px);
+	padding: 7px;
+	height: 16px;
+	position: fixed;
+	bottom: 0%;
+	width: 99.25%;
+}
+
+.nav {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.nav a {
+	color: white;
+	text-decoration: none;
+	margin-right: 5px;
+}
+.nav p {
+	color: white;
+	text-decoration: none;
+	margin-right: 5px;
+}
+
+.nav a:hover {
+	color: white;
+	border-bottom: 1px solid white;
+}
